@@ -4,6 +4,10 @@
 [![Vanilla JS](https://img.shields.io/badge/stack-vanilla%20JS-f7df1e)](game.js)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-0f766e)](package.json)
 [![Accessible Arcade](https://img.shields.io/badge/accessibility-first-2563eb)](README.md#accessibility)
+[![Superman Mode](https://img.shields.io/badge/built%20with-12%20parallel%20Grok%204.3%20builds-ff69b4)](https://github.com/0thernes/flappy-bird-calm-edition)
+
+> **LFG.** Elevated across 12 simultaneous Grok 4.3 builds — Superman mode fully engaged.
+> This drop adds cinematic new visuals, richer calm atmosphere, and a repo that finally looks as good as the game feels.
 
 **A polished, friendly, browser-first Flappy Bird built for flow instead of frustration.**
 
@@ -14,7 +18,7 @@ for phones (Brake / Flap / Dive). Installable as a PWA on iOS and Android, with 
 worker that caches the app shell after the first localhost/HTTPS visit. No build step. No external
 runtime assets. Just open the game and glide.
 
-[![Flappy Bird Calm Edition preview showing the polished hero and playfield.](docs/assets/flappy-calm-edition-preview.png)](https://0thernes.github.io/flappy-bird-calm-edition/)
+[![Serene meadow golden hour scene — the bird gliding peacefully between generous pipes in Flappy Bird Calm Edition.](docs/assets/hero-calm-meadow.jpg)](https://0thernes.github.io/flappy-bird-calm-edition/)
 
 [Play the live demo](https://0thernes.github.io/flappy-bird-calm-edition/) ·
 [Run locally](#quick-start) ·
@@ -42,7 +46,7 @@ runtime assets. Just open the game and glide.
 - **Calm physics presets** — Tune gravity and speed from gentle to lively.
 - **Daily Seed mode** — Deterministic pipe pattern by UTC date for friendly comparison.
 - **Zen Customizer** — Physics sliders, audio volumes, theme picker, daily-seed toggle, audio test, reset stats.
-- **Four themes** — Sunset, Midnight, Cozy Rain, and Aurora each change colors, weather, and music.
+- **Five themes** — Sunset, Midnight, Cozy Rain, Aurora, and the new Meadow (golden-hour greens & warm sunlight) each change colors, weather, and music.
 - **Feather Shield** — A collectible bubble that absorbs one crash and grants brief invincibility.
 - **Expressive bird** — Calm, happy, scared, determined, and dizzy states with blush, smile, and dizzy swirls.
 - **Eye tracking** — Pupils track the nearest safe gap for a lively, readable character.
@@ -135,12 +139,14 @@ Calm Edition treats accessibility as part of the game design, not a side quest.
 | `.github/ISSUE_TEMPLATE/` | Friendly issue forms for bugs, ideas, and accessibility feedback.                          |
 | `.github/workflows/ci.yml` | GitHub Actions smoke check for pushes and pull requests.                                  |
 | `.memory/`                | Project context notes for future maintainers and AI assistants.                            |
+| `CODE_OF_CONDUCT.md`      | Calm, welcoming community guidelines tuned to this project's spirit.                       |
+| `docs/architecture_master_blueprint.md` | Calm, humble philosophy & technical architecture (replaced earlier corporate-style blueprint). |
 | `LICENSE.txt`             | AGPL-3.0-or-later license text.                                                            |
 
 ## Contributing
 
 Contributions are welcome when they keep the game calm, accessible, dependency-free, and easy
-to run. Start with [CONTRIBUTING.md](CONTRIBUTING.md), then use the issue templates for bugs,
+to run. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and our [Code of Conduct](CODE_OF_CONDUCT.md), then use the issue templates for bugs,
 feature ideas, or accessibility feedback.
 
 Good first areas:

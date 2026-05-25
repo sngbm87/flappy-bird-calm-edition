@@ -1,7 +1,7 @@
 # Contributing
 
 Thanks for helping make Calm Edition better. This project values small, focused,
-player-friendly changes.
+player-friendly changes. Please also follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Project Principles
 
