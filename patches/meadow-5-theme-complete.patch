@@ -53,6 +53,18 @@ index 2222222..3333333 100644
      });
    });
 
+diff --git a/game.js b/game.js
+index 3333333..4444444 100644
+--- a/game.js
++++ b/game.js
+@@ -2193,7 +2193,7 @@ function applyTheme(theme) {
+   const metaTheme = document.querySelector('meta[name="theme-color"]');
+   if (metaTheme) {
+-    const palette = { sunset: "#180927", midnight: "#020206", rain: "#0a0f1d", aurora: "#030f0c" };
++    const palette = { sunset: "#180927", midnight: "#020206", rain: "#0a0f1d", aurora: "#030f0c", meadow: "#1a140f" };
+     metaTheme.setAttribute("content", palette[nextTheme] || "#081120");
+   }
+
 diff --git a/index.html b/index.html
 index 4444444..5555555 100644
 --- a/index.html
