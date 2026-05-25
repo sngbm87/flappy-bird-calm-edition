@@ -1,0 +1,51 @@
+diff --git a/game.js b/game.js
+index 8e8e0e0..c0ffee1 100644
+--- a/game.js
++++ b/game.js
+@@ -2350,7 +2350,7 @@ const ACHIEVEMENTS = [
+   { id: "FirstFlight", name: "First Flight", check: () => state.score >= 1, progress: () => `${Math.min(state.score, 1)}/1` },
+   { id: "ZenMaster", name: "Zen Master", check: () => state.score >= 15, progress: () => `${Math.min(state.score, 15)}/15` },
+   { id: "ShieldSavior", name: "Shield Savior", check: () => state.shieldsSavedCount >= 1, progress: () => `${Math.min(state.shieldsSavedCount, 1)}/1` },
+-  { id: "ThemeExplorer", name: "Theme Explorer", check: () => state.playedThemes.size >= 4, progress: () => `${state.playedThemes.size}/4` },
++  { id: "ThemeExplorer", name: "Theme Explorer", check: () => state.playedThemes.size >= 5, progress: () => `${state.playedThemes.size}/5` },
+   { id: "CalmMarathon", name: "Calm Marathon", check: () => state.zenTimeSec >= 300, progress: () => `${Math.min(Math.floor(state.zenTimeSec / 60), 5)}/5 min` },
+   // ... rest of achievements unchanged
+ ];
+
+diff --git a/game.js b/game.js
+index c0ffee1..d1a2b3c 100644
+--- a/game.js
++++ b/game.js
+@@ -2375,8 +2375,13 @@ function checkAchievements() {
+     if (isUnlocked && !wasUnlocked) {
+       state.unlockedAchievements.add(ach.id);
+       el.classList.add("unlocked");
+       sfxAchievement();
+       hapticPulse(60);
+-      spawnParticles(bird.x, bird.y - 30, 18, "#10b981", 4);
+-      announce(`Achievement unlocked: ${ach.name}.`);
++      const isThemeExplorer = ach.id === "ThemeExplorer";
++      spawnParticles(bird.x, bird.y - 30, isThemeExplorer ? 26 : 18, isThemeExplorer ? "#f4d35e" : "#10b981", isThemeExplorer ? 7 : 4);
++      const unlockText = isThemeExplorer
++        ? `Achievement unlocked: ${ach.name}. The full palette is yours.`
++        : `Achievement unlocked: ${ach.name}.`;
++      announce(unlockText);
+       showToast(`🎉 ${ach.name}`, "achievement");
+       syncStatsAndAchievements(true);
+     } else if (isUnlocked) {
+
+diff --git a/index.html b/index.html
+index 4f5e6d7..9a8b7c6 100644
+--- a/index.html
++++ b/index.html
+@@ -271,7 +271,7 @@
+         <div class="achievement-item" id="achThemeExplorer">
+           <span class="achievement-badge">🎨</span>
+           <div class="achievement-details">
+             <h4 class="achievement-title">Theme Explorer</h4>
+-            <p class="achievement-desc">Play under all four visual themes</p>
++            <p class="achievement-desc">Play under all five visual themes</p>
+             <p class="achievement-progress"></p>
+           </div>
+           <span class="achievement-check" aria-hidden="true">✔</span>
+         </div>
