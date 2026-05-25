@@ -1,7 +1,7 @@
 // @ts-check
 "use strict";
 
-const CACHE_NAME = "flappy-calm-v2.0.2";
+const CACHE_NAME = "flappy-calm-v2.2.0";
 const APP_SHELL = Object.freeze([
   "./",
   "./index.html",
